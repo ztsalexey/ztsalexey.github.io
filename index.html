@@ -3,16 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Alexey Zenin</title>
-<meta name="description" content="Alexey Zenin, founder and CEO of OpenOrange. Aerospace engineer turned systems builder: AI infrastructure, trading systems, protocol standards.">
-<meta property="og:title" content="Alexey Zenin">
-<meta property="og:description" content="Founder and CEO of OpenOrange. Zero-g flight crew, NEAR standard co-author, high-frequency trading systems, and now the AI environment that improves itself.">
+<title>Alexey Zenin · Co-founder &amp; CEO, OpenOrange</title>
+<meta name="description" content="Alexey Zenin, co-founder and CEO of OpenOrange, the AI environment that improves itself. From a small town in Siberia to Purdue aerospace, zero-g flight crew, AI and crypto infrastructure.">
+<meta property="og:title" content="Alexey Zenin · Co-founder & CEO, OpenOrange">
+<meta property="og:description" content="From a small town in Siberia to zero-g flight crew, a NEAR protocol standard, AI infrastructure for 100K+ users, and now the AI environment that improves itself.">
+<meta property="og:type" content="profile">
+<meta property="og:url" content="https://ztsalexey.github.io/">
 <meta property="og:image" content="https://github.com/ztsalexey.png">
 <meta name="twitter:card" content="summary">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='42' fill='%23ff7a1a'/></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root {
     --bg: #0b0b0d;
@@ -48,11 +50,13 @@
   .avatar { width: 72px; height: 72px; border-radius: 50%; border: 2px solid var(--accent); object-fit: cover; }
   h1 { font-size: clamp(44px, 9vw, 84px); line-height: .95; margin-top: 18px; }
   h1 .dot { color: var(--accent); }
-  .lead { font-size: clamp(18px, 2.4vw, 22px); color: #d6d6de; max-width: 760px; margin: 22px 0 0; }
+  .tagline { font: 600 clamp(22px, 3vw, 30px)/1.2 "Space Grotesk", Inter, sans-serif; margin: 16px 0 0; }
+  .tagline a { color: var(--accent); text-decoration: none; }
+  .lead { font-size: clamp(17px, 2.2vw, 20px); color: #d6d6de; max-width: 780px; margin: 18px 0 0; }
   .links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
   .links a {
     font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 13px; text-decoration: none;
-    padding: 7px 12px; border: 1px solid var(--line); border-radius: 999px; background: var(--panel);
+    padding: 10px 14px; border: 1px solid var(--line); border-radius: 999px; background: var(--panel);
   }
   .links a:hover { border-color: var(--accent); }
   .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; margin-top: 40px; }
@@ -62,8 +66,9 @@
 
   /* sections */
   section { padding: 56px 0 8px; }
-  section > .wrap > h2 { font-size: clamp(28px, 4.4vw, 40px); margin-top: 6px; }
+  section > .wrap > h2 { font-size: clamp(28px, 4.4vw, 40px); line-height: 1.15; margin-top: 6px; }
   section > .wrap > p.sub { color: var(--muted); margin: 8px 0 0; max-width: 720px; }
+  .story { font-size: clamp(17px, 2.1vw, 19px); color: #d6d6de; max-width: 780px; margin: 18px 0 0; }
 
   .card { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 24px; margin-top: 22px; }
   .card.feature { border-color: rgba(255,122,26,.45); background: linear-gradient(180deg, var(--accent-soft), var(--panel) 55%); }
@@ -78,7 +83,7 @@
   .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
   .tags a, .tags span {
     font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 12px; text-decoration: none;
-    padding: 4px 10px; border-radius: 6px; background: #1c1c22; border: 1px solid var(--line); color: #c9c9d3;
+    padding: 6px 10px; border-radius: 6px; background: #1c1c22; border: 1px solid var(--line); color: #c9c9d3;
   }
   .tags a:hover { border-color: var(--accent); color: var(--accent); }
   .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 0 22px; }
@@ -87,7 +92,6 @@
   th, td { text-align: left; padding: 12px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
   th { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 12px; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
   td.prize { color: var(--accent); font-weight: 600; }
-  .table-scroll { overflow-x: auto; }
 
   .quote { font-family: "Space Grotesk", sans-serif; font-size: clamp(22px, 3.4vw, 30px); line-height: 1.25; max-width: 820px; }
   footer { border-top: 1px solid var(--line); margin-top: 64px; padding: 32px 0 48px; color: var(--muted); font-size: 14px; }
@@ -97,7 +101,10 @@
     .stats { grid-template-columns: 1fr 1fr; }
     .grid2 { grid-template-columns: 1fr; }
     .card { padding: 18px; }
-    th:nth-child(4), td:nth-child(4) { display: none; }
+    table, tbody, tr, td { display: block; }
+    thead { display: none; }
+    tr { padding: 14px 0; border-bottom: 1px solid var(--line); }
+    td { border: 0; padding: 2px 0; }
   }
 </style>
 </head>
@@ -106,11 +113,12 @@
 <header class="hero">
   <div class="wrap">
     <div class="hero-top">
-      <img class="avatar" src="https://github.com/ztsalexey.png" alt="Alexey Zenin">
-      <div class="kicker">Founder &amp; CEO · OpenOrange</div>
+      <img class="avatar" src="https://github.com/ztsalexey.png" alt="">
+      <div class="kicker">Co-founder &amp; CEO · OpenOrange</div>
     </div>
     <h1>Alexey Zenin<span class="dot">.</span></h1>
-    <p class="lead">Aerospace engineer who left a PhD to build. I've flown experiments in zero gravity, co-written a NEAR protocol standard, run trading systems against the fastest bots on three chains, and now I'm building the AI environment that improves itself.</p>
+    <p class="tagline">Building <a href="https://openorange.ai">OpenOrange</a>, the AI environment that improves itself.</p>
+    <p class="lead">A kid from a small town deep in Siberia who did math and physics for fun, then kept going: aerospace engineer, zero-g flight crew, a PhD I left to build, a NEAR protocol standard, AI infrastructure for 100K+ users, and trading systems that raced the fastest bots on three chains.</p>
     <nav class="links">
       <a href="https://openorange.ai">openorange.ai</a>
       <a href="https://github.com/ztsalexey">github</a>
@@ -119,14 +127,15 @@
       <a href="https://2bb.dev">2bb.dev</a>
     </nav>
     <div class="stats">
-      <div class="stat"><b>9,000+</b><span>GitHub contributions in the last 12 months</span></div>
       <div class="stat"><b>#1</b><span>committer on OpenOrange's core product</span></div>
       <div class="stat"><b>210+</b><span>OpenOrange releases since June 2026</span></div>
-      <div class="stat"><b>7</b><span>hackathon awards across 5 events</span></div>
+      <div class="stat"><b>1st</b><span>at Harvard Blockchain × EasyA, one of 7 hackathon awards</span></div>
+      <div class="stat"><b>0 g</b><span>flew as crew to test hardware I built</span></div>
     </div>
   </div>
 </header>
 
+<main>
 <section id="now">
   <div class="wrap">
     <div class="kicker">Now</div>
@@ -137,7 +146,7 @@
         <span class="when">2026 → now</span>
       </div>
       <div class="role">Co-founder &amp; CEO</div>
-      <p class="what">A self-improving, customer-controlled AI environment: a company runs any agent, any model and its own tools in one place it controls, and the setup gets better with use instead of needing more engineers.</p>
+      <p class="what">Every company gets its own AI environment: any agent, any model and its own tools, on infrastructure it controls. It gets better with use, not with headcount.</p>
       <ul>
         <li>Set the mission, the vision and the top-level design, and built the team of engineers to deliver it.</li>
         <li>Then took the keyboard: #1 committer on the core product since September, with 2,700+ commits, much of the code written by AI agents running on OpenOrange itself.</li>
@@ -146,7 +155,6 @@
       <div class="tags">
         <a href="https://openorange.ai">openorange.ai</a>
         <a href="https://github.com/2bb-dev/openorange-integrations">openorange-integrations (MCP + CLI)</a>
-        <a href="https://github.com/2bb-dev/pi-openorange-provider">pi-openorange-provider</a>
         <span>TypeScript</span><span>Python</span><span>Rust</span>
       </div>
     </div>
@@ -156,20 +164,18 @@
 <section id="before">
   <div class="wrap">
     <div class="kicker">Before</div>
-    <h2>Systems that had to be fast, correct and always on</h2>
+    <h2>AI and crypto systems that had to be fast, correct and always on</h2>
 
     <div class="card">
       <div class="card-head"><h3>BitMind</h3><span class="when">Feb 2024 → Mar 2026</span></div>
       <div class="role">Founding Engineer</div>
-      <p class="what">AI deepfake detection on Bittensor (Subnet 34) across image, video and audio. BitMind reports 2M+ detections a week and 100K+ monthly users.</p>
+      <p class="what">AI deepfake detection across image, video and audio, running on Bittensor (Subnet 34). BitMind reports 2M+ detections a week and 100K+ monthly users.</p>
       <ul>
-        <li>Led Bittensor core experiments and BitMind's security.</li>
+        <li>Led core network experiments and BitMind's security.</li>
         <li>Sole author of the staking contracts for Seraph, BitMind's AI agent, on Bittensor EVM and Base. Externally audited.</li>
-        <li>Built the web3 stack from zero: Alpha-token indexers, on-chain oracles and a Telegram trading terminal.</li>
       </ul>
       <div class="tags">
         <a href="https://bitmind.ai">bitmind.ai</a>
-        <a href="https://huggingface.co/bitmind">huggingface.co/bitmind</a>
         <a href="https://github.com/SeraphAgent/seraph-staking-contracts">seraph-staking-contracts</a>
       </div>
     </div>
@@ -179,8 +185,8 @@
       <div class="role">CTO</div>
       <p class="what">A perpetual-futures exchange for Bittensor subnet tokens on Bittensor EVM: TAO collateral, up to 5x leverage, 12+ live markets.</p>
       <ul>
-        <li>Wrote most of the trading backbone: a price oracle derived from on-chain pool reserves (no off-chain feeds to manipulate), the indexer, liquidation and order-fill keepers, the market-maker service and monitoring.</li>
-        <li>760+ commits, 44% of the codebase; #1 committer in 10 of 20 repos.</li>
+        <li>Wrote most of the trading backbone: a price oracle derived from on-chain pool reserves (no off-chain feed dependency), the indexer, liquidation and order-fill keepers, the market-maker service and monitoring.</li>
+        <li>760+ commits, 44% of all commits; #1 committer in 10 of 20 repos.</li>
         <li>Took the protocol through independent security audits.</li>
       </ul>
       <div class="tags"><a href="https://megatao.com">megatao.com</a><span>Solidity</span><span>TypeScript</span></div>
@@ -188,12 +194,12 @@
 
     <div class="card">
       <div class="card-head"><h3>High-frequency trading</h3><span class="when">2024 → 2025</span></div>
-      <div class="role">Built and operated</div>
-      <p class="what">Automated trading systems on Bittensor, EVM chains and Solana, in markets where a handful of operators take nearly all the value.</p>
+      <div class="role">Co-built and operated, with Andrey Gruzdev</div>
+      <p class="what">Automated trading on Bittensor, Ethereum and Solana, racing the fastest bots in real time.</p>
       <ul>
         <li>Ran a globally distributed node network for latency-optimized execution.</li>
-        <li>Top-performing on Bittensor for months, competing in real time against the fastest bots.</li>
-        <li>Then switched sides: built TaoFlash, a relay that protects users' swaps from front-running.</li>
+        <li>Top performer on Bittensor for months.</li>
+        <li>Then built TaoFlash, a relay that shields users' swaps from front-running.</li>
       </ul>
       <div class="tags"><a href="https://taoflash.com">taoflash.com</a></div>
     </div>
@@ -203,7 +209,7 @@
       <div class="role">NEAR Foundation, business development &amp; infrastructure · SourceScan co-founder</div>
       <ul>
         <li>Co-author of <a href="https://github.com/near/NEPs/blob/master/neps/nep-0330.md">NEP-330</a>, NEAR's Source Metadata standard (Final). Our 1.2.0 Build Details extension makes contract builds reproducible and verifiable.</li>
-        <li>Co-founded SourceScan, NEAR's contract-verification service: 105 contracts verified on mainnet, built into NEARBlocks and near-cli-rs, and the default build image in cargo-near (15.7K pulls).</li>
+        <li>Co-founded SourceScan, NEAR's contract verifier: built into NEARBlocks and near-cli-rs, and the default build image for every new cargo-near project (15.7K pulls).</li>
         <li>Evaluated investments and grants for ecosystem projects and ran architecture reviews with infrastructure providers.</li>
       </ul>
       <div class="tags">
@@ -219,7 +225,7 @@
         <div class="role">Co-founder</div>
         <p class="what">A builder studio that started as strangers at a hackathon. 10 shipped products.</p>
         <ul>
-          <li>Wrote the smart contracts for most of them: 440+ commits, #1 in 17 repos.</li>
+          <li>Smart-contract lead for the studio: 440+ commits, #1 committer in 17 repos.</li>
         </ul>
         <div class="tags">
           <a href="https://2bb.dev">2bb.dev</a>
@@ -241,15 +247,15 @@
 <section id="open-source">
   <div class="wrap">
     <div class="kicker">Open source &amp; research</div>
-    <h2>In public</h2>
+    <h2>Built in the open</h2>
     <div class="grid2">
       <div class="card">
         <div class="card-head"><h3>IronClaw</h3><span class="when">2026</span></div>
-        <div class="role">NEAR AI's Rust agent framework · 12.7K stars</div>
+        <div class="role">NEAR AI's open-source agent framework · 12.7K stars</div>
         <ul>
           <li>9 merged PRs: multi-provider LLM failover with retry backoff and cooldowns, configurable hybrid-search fusion, structured fallbacks for failed or stuck jobs.</li>
         </ul>
-        <div class="tags"><a href="https://github.com/nearai/ironclaw/pulls?q=author%3Aztsalexey">my PRs</a><span>Rust</span></div>
+        <div class="tags"><a href="https://github.com/nearai/ironclaw/pulls?q=is%3Apr+author%3Aztsalexey+is%3Amerged">merged PRs</a><span>Rust</span></div>
       </div>
       <div class="card">
         <div class="card-head"><h3>EPOCH benchmark</h3><span class="when">2026</span></div>
@@ -268,12 +274,12 @@
         <div class="tags"><a href="https://github.com/ztsalexey/wallet-privacy-testkit">wallet-privacy-testkit</a><span>Python</span></div>
       </div>
       <div class="card">
-        <div class="card-head"><h3>Seraph staking</h3><span class="when">2024 → 2025</span></div>
-        <div class="role">Sole author · externally audited</div>
+        <div class="card-head"><h3>buildr.build</h3><span class="when">2024</span></div>
+        <div class="role">Sole author of the contracts</div>
         <ul>
-          <li>Dual staking for an AI agent across Bittensor EVM and Base. 79 commits, every one mine.</li>
+          <li>An NFT collection and generator, deployed on-chain, for a web3 builder community.</li>
         </ul>
-        <div class="tags"><a href="https://github.com/SeraphAgent/seraph-staking-contracts">seraph-staking-contracts</a><span>Solidity</span></div>
+        <div class="tags"><a href="https://github.com/2BeBuilt/buildr-build-contract">buildr-build-contract</a><span>Solidity</span></div>
       </div>
     </div>
   </div>
@@ -284,32 +290,31 @@
     <div class="kicker">Hackathons</div>
     <h2>Weekends well spent</h2>
     <p class="sub">Mostly with my 2BB co-founder, Andrey Gruzdev.</p>
-    <div class="table-scroll">
-      <table>
-        <thead><tr><th>Year</th><th>Event</th><th>Award</th><th>Project</th></tr></thead>
-        <tbody>
-          <tr><td class="mono">2026</td><td>ETHGlobal HackMoney</td><td class="prize">Finalist + ENS prize</td><td><a href="https://ethglobal.com/showcase/claw2claw-3uxgx">claw2claw</a>: P2P trading for AI agents on a Uniswap v4 hook</td></tr>
-          <tr><td class="mono">2025</td><td>Coinbase CDP AI Hackathon</td><td class="prize">Best Infrastructure Prize</td><td>Proof of Autonomy: verifiable inference for AI agents. Ghost-built for the BitMind team.</td></tr>
-          <tr><td class="mono">2023</td><td>ETHGlobal Paris</td><td class="prize">2nd, NEAR: Best Frontend with BOS</td><td><a href="https://ethglobal.com/showcase/sourcescan-bos-dyfe9">SourceScan.BOS</a>, won remotely with Andrey</td></tr>
-          <tr><td class="mono">2023</td><td>Harvard Blockchain × EasyA</td><td class="prize">1st place, Axelar track</td><td><a href="https://wdrive.io">Warp Drive</a>: cross-chain strategy game across four chains</td></tr>
-          <tr><td class="mono">2023</td><td>ETHGlobal Scaling Ethereum</td><td class="prize">FVM Best Primitives or Infra + Scroll</td><td><a href="https://ethglobal.com/showcase/timepact-1mof1">TimePact</a>: encrypted time capsules unlocked by NFTs. I led the contracts.</td></tr>
-        </tbody>
-      </table>
-    </div>
+    <table>
+      <thead><tr><th>Year</th><th>Event</th><th>Award</th><th>Project</th></tr></thead>
+      <tbody>
+        <tr><td class="mono">2026</td><td>ETHGlobal HackMoney</td><td class="prize">Finalist + ENS prize</td><td><a href="https://ethglobal.com/showcase/claw2claw-3uxgx">claw2claw</a>: P2P trading for AI agents on a Uniswap v4 hook</td></tr>
+        <tr><td class="mono">2025</td><td>Coinbase CDP AI Hackathon</td><td class="prize">Best Infrastructure Prize</td><td>Proof of Autonomy: verifiable inference for AI agents. Ghost-built for the BitMind team.</td></tr>
+        <tr><td class="mono">2023</td><td>ETHGlobal Paris</td><td class="prize">2nd, NEAR: Best Frontend with BOS</td><td><a href="https://ethglobal.com/showcase/sourcescan-bos-dyfe9">SourceScan.BOS</a>, won remotely with Andrey</td></tr>
+        <tr><td class="mono">2023</td><td>Harvard Blockchain × EasyA</td><td class="prize">1st place, Axelar track</td><td><a href="https://wdrive.io">Warp Drive</a>: cross-chain strategy game across four chains</td></tr>
+        <tr><td class="mono">2023</td><td>ETHGlobal Scaling Ethereum</td><td class="prize">2 prizes: Filecoin FVM Best Infra + Scroll</td><td><a href="https://ethglobal.com/showcase/timepact-1mof1">TimePact</a>: encrypted time capsules unlocked by NFTs. I led the contracts.</td></tr>
+      </tbody>
+    </table>
   </div>
 </section>
 
-<section id="aerospace">
+<section id="origin">
   <div class="wrap">
     <div class="kicker">Origin story</div>
     <h2>Gravity is overrated</h2>
+    <p class="story">I grew up in a small town deep in Siberia, where minus forty is just weather and a good math or physics problem was the best entertainment in town. I did a lot of those. They got me to a high school in New York, where I captained the soccer team, then to Purdue to learn how to leave the planet, and eventually onto a plane that flies parabolas so I could test hardware I'd built in zero gravity. Gravity turned out to be overrated. So did winter, but don't tell my hometown.</p>
     <div class="grid2">
       <div class="card">
         <h3>Aerospace</h3>
         <ul>
           <li>Flew as crew on a Zero-G parabolic flight to test the small-satellite propellant pumping system I built.</li>
-          <li>Prepared a blood-air separator for spaceflight on Blue Origin's New Shepard.</li>
-          <li>Led life support for a 70-person Mars cycler in a propellantless-exploration study with Dr. Andy Aldrin and Dr. James Longuski.</li>
+          <li>Designed the geometry of a blood-air separator prepared for flight on Blue Origin's New Shepard.</li>
+          <li>Led life support for a 70-person Mars cycler in a propellantless-exploration study led by Dr. Andy Aldrin and Dr. James Longuski.</li>
           <li>Laser diagnostics of plasma in Dr. Richard Miles' lab at Texas A&amp;M.</li>
         </ul>
       </div>
@@ -322,7 +327,7 @@
         </ul>
         <h3 style="margin-top:22px">First company</h3>
         <ul>
-          <li>Founded a drinks business in 2017: built our own equipment to cut start-up capital ~10×, and broke even in the first week.</li>
+          <li>Back home in Siberia, started a lemonade business in 2017: built our own carbonation rig from industrial parts, cut the start-up capital ~10×, and broke even in the first week.</li>
         </ul>
       </div>
     </div>
@@ -331,9 +336,10 @@
 
 <section>
   <div class="wrap">
-    <p class="quote">"Most of what I build, you won't find here." That's still true of my GitHub. This page is the part you can see.</p>
+    <p class="quote">Still that kid from a small Siberian town who can't leave a hard problem alone. Building OpenOrange now; fastest way to reach me is X or LinkedIn.</p>
   </div>
 </section>
+</main>
 
 <footer>
   <div class="wrap">
